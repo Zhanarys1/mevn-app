@@ -27,5 +27,5 @@ let router = new Router({
 
 new Vue({
   router:router,
-  render: h => h(Thanks),
+  render: h => h(Home),
 }).$mount('#app')
