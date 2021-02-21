@@ -6,7 +6,7 @@
    const app = express();
    app.use(cors());
    app.set('port', 3000);
-   mongoose.connect('mongodb+srv://Zhanarys:18012006@cluster0.1tzal.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{useNewUrlParser:true})
+   mongoose.connect('',{useNewUrlParser:true})
    .then(db => console.log('[OK] DB is connected'))
      .catch(err => console.error(err));
   
