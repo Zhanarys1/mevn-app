@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Vuetify from 'vuetify'
 import Home from './views/Home.vue'
 import Thanks from './views/Thanks.vue'
 import App from './views/App.vue'
+import vuetify from './plugins/vuetify';
 
 
 Vue.use(Router)
-
+Vue.use(Vuetify)
 let router = new Router({
   routes: [
    {
@@ -32,6 +34,7 @@ let router = new Router({
 )
 
 new Vue({
-  router:router,
-  render: h => h(App),
+ router:router,
+ vuetify,
+ render: h => h(App)
 }).$mount('#app')
