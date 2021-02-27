@@ -2,16 +2,22 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Thanks from './views/Thanks.vue'
+import App from './views/App.vue'
 
-Vue.config.productionTip = false
+
 Vue.use(Router)
 
 let router = new Router({
   routes: [
    {
      path: '/',
-     name: 'home',
-     component: Home
+     name: 'app',
+     component: App
+   },
+   {
+    path: '/home',
+    name: 'home',
+    component: Home
    },
    {
     path:'/thanks',
@@ -27,5 +33,5 @@ let router = new Router({
 
 new Vue({
   router:router,
-  render: h => h(Home),
+  render: h => h(App),
 }).$mount('#app')

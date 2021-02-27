@@ -30,6 +30,7 @@ import axios from 'axios';
 
 export default { 
  name: 'home',
+ components: {},
 data: function () {
     return {
         name:'',
@@ -41,8 +42,8 @@ data: function () {
 methods: {
     async sendData() {
 
-        console.log(await axios({
-          url :'http://localhost:3000/api/records',
+        await axios({
+          url :'https://thawing-eyrie-84225.herokuapp.com/api/records',
           method: 'post',
           data: {
             name: this.name,
@@ -50,7 +51,7 @@ methods: {
             address: this.address,
             gender: this.gender
           }
-        }));
+        });
 
         this.$router.push('thanks');
         
